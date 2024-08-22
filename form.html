@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+    }
+    body {
+      background-color: gray;
+    }
+    h2 {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .form {
+      width: 800px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: pink;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    p input {
+      width: 49.7%;
+    }
+    select {
+      width: 49.7%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .tb {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .tb .label {
+        text-align: center;
+    }
+    .q1 {
+      margin: 10px 0px;
+    }
+    .button {
+      margin: auto;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: blue;
+      color: white;
+    }
+    .btn:hover {
+      /* box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+      -10px -10px 10px white; */
+      background-color: #f9f9f9;
+      color: black;
+      border: 1px solid red;
+      padding: 15px 25px;
+    }
+  </style>
+  <body>
+    <div class="form">
+      <h2>User Experience Research Form</h2>
+      <form action="index.html" method="">
+        <p>
+          <label for="name">Name</label> <br />
+          <input type="text" name="firstname" id="name" placeholder="First" required />
+          <input type="text" name="lastname" id="name" placeholder="Last" />
+        </p>
+        <br />
+
+        <label for="emali">Email</label>
+        <input type="email" name="email" id="email" /> <br />
+
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="### ### ####" />
+        <br />
+
+        <label for="address">Address</label>
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Street Address"
+        />
+        <br />
+        <input
+          type="text"
+          name="address"
+          id="address2"
+          placeholder="Street Address Line 2"
+        /><br />
+        <p>
+          <input type="text" name="city" id="city" placeholder="City" />
+          <input type="text" name="region" id="region" placeholder="Region" />
+        </p>
+        <br />
+        <p>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            placeholder="Postal / Zip Code"
+          />
+          <select name="country" id="country">
+            <option value="country1">Nigeria</option>
+            <option value="country2">Ivory Coast</option>
+            <option value="country3">U.S.A</option>
+          </select>
+        </p>
+        <br />
+        <fieldset>
+          <legend>Questions</legend>
+          <div class="tb">
+                <p class="label"></p>
+                <p class="label">Very Good</p>
+                <p class="label">Good</p>
+                <p class="label">Fair</p>
+                <p class="label">Poor</p>
+                <p class="label">Very Poor</p>
+
+                <p class="q1">I prefer using the product</p>
+                <input type="radio" name="q1" id="verygood">
+                <input type="radio" name="q1" id="good">
+                <input type="radio" name="q1" id="fair">
+                <input type="radio" name="q1" id="poor">
+                <input type="radio" name="q1" id="verypoor">
+
+                <p class="q1">The product is intuitive and easy-to-use</p>
+                <input type="radio" name="q2" id="verygood">
+                <input type="radio" name="q2" id="good">
+                <input type="radio" name="q2" id="fair">
+                <input type="radio" name="q2" id="poor">
+                <input type="radio" name="q2" id="verypoor">
+          </div>
+        </fieldset>
+        <div class="button">
+          <button class="btn" value="submit">Submit</button>
+          <button class="btn" type="reset">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
